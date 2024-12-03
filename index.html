@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Purcify - Full Stack Programmer & Minecraft Server Developer specializing in custom plugins, server configuration, and efficient systems">
+    <meta name="keywords" content="Minecraft Developer, Server Configuration, Plugin Development, Full Stack Programming, PercEconomy, Python, C#">
+    <meta name="author" content="Purcify">
+    <title>Purcify - Full Stack & Minecraft Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-pic">
+                <img src="minecraft_skin.png" alt="Minecraft Skin">
+            </div>
+            <h2>Purcify</h2>
+            <p class="server">Currently at: <strong>BendersMC</strong></p>
+            <p class="location">Australia, QLD</p>
+            <div class="social-icons">
+                <a href="https://discord.com/users/384449598305075200" target="_blank">
+                    <img src="discord.svg" alt="Discord">
+                </a>
+                <a href="https://github.com/Purcify92" target="_blank">
+                    <img src="github.svg" alt="GitHub">
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'AboutMe')">About Me</button>
+                <button class="tab-link" onclick="openTab(event, 'Resume')">Resume</button>
+            </div>
+
+            <div id="AboutMe" class="tab-content" style="display: block;">
+                <h1>About Me</h1>
+                <p>G'day, I'm Purcify.
+                    I'm an experienced full stack programmer and Minecraft Server Developer with a passion for building efficient systems and crafting unforgettable gaming experiences. From front-end to back-end, I know my way around a wide range of technologies, but what really drives me is creating custom Minecraft servers that bring communities together and push gameplay to new heights.</p>
+                <h2>Services I Offer</h2>
+                <div class="services">
+                    <div class="service-item">
+                        <img src="gear-solid.svg" alt="Service Icon">
+                        <h3>Server Configuration</h3>
+                        <p>I have spent most of my time on Minecraft Servers configuring plugins like LuckPerms, MythicMobs, Citizens, etc. I specialize in creating seamless integrations between plugins to create unique gameplay experiences.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="code-solid.svg" alt="Service Icon">
+                        <h3>Plugin Development</h3>
+                        <p>I develop custom Minecraft plugins to enhance server functionality. My flagship project, PercEconomy, is a comprehensive economy plugin that features Basic player commands, Admin commands for managing balances, Vault integration, Extensive configuration to allow customization of every aspect of the plugin, and more.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="code-solid.svg" alt="Python Development">
+                        <h3>Python Development</h3>
+                        <p>Experienced in Python development for automation, data processing, and backend services. I create efficient, maintainable solutions using modern Python practices and frameworks.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="code-solid.svg" alt="C# Development">
+                        <h3>C# Development</h3>
+                        <p>Proficient in C# development for desktop applications and game development. I leverage the .NET ecosystem to build robust, high-performance applications with clean, maintainable code.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Resume" class="tab-content" style="display: none;">
+                <h1>Resume</h1>
+                <div class="experience">
+                    <div class="experience-item">
+                        <h3>Developer Grade 3 at BendersMC</h3>
+                        <span>2023 - Present</span>
+                        <p>As a Developer Grade 3 at BendersMC, I have achieved a high role in the development team and help with managment of the server, everything from simple bug fixes to implementing new content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.getElementById('themeToggle');
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                button.textContent = '🌙';
+            } else {
+                body.classList.add('dark-theme');
+                button.textContent = '☀️';
+            }
+        }
+    </script>
+</body>
+</html>
